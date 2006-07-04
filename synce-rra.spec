@@ -2,7 +2,7 @@ Summary:	RRA - SynCE synchronization application
 Summary(pl):	RRA - aplikacja SynCE do synchronizacji
 Name:		synce-rra
 Version:	0.9.1
-Release:	1
+Release:	2
 License:	MIT
 Group:		Libraries
 Source0: 	http://dl.sourceforge.net/synce/%{name}-%{version}.tar.gz
@@ -14,10 +14,10 @@ BuildRequires:	automake >= 1.4
 BuildRequires:	libmimedir-vlm-devel
 BuildRequires:	libtool
 BuildRequires:	rpmbuild(macros) >= 1.213
-BuildRequires:	synce-librapi2-devel >= 0.9.0
-BuildRequires:	synce-libsynce-devel >= 0.9.0
-Requires:	synce-librapi2 >= 0.9.0
-Requires:	synce-libsynce >= 0.9.0
+BuildRequires:	synce-librapi2-devel >= 0.9.1
+BuildRequires:	synce-libsynce-devel >= 0.9.1
+Requires:	synce-librapi2 >= 0.9.1
+Requires:	synce-libsynce >= 0.9.1
 ExcludeArch:	%{x8664} alpha ia64 ppc64 s390x sparc64
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -41,8 +41,8 @@ Summary(pl):	Pliki nag³ówkowe biblioteki RRA
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	libmimedir-vlm-devel
-Requires:	synce-librapi2-devel >= 0.9.0
-Requires:	synce-libsynce-devel >= 0.9.0
+Requires:	synce-librapi2-devel >= 0.9.1
+Requires:	synce-libsynce-devel >= 0.9.1
 
 %description devel
 Header files for RRA library.
