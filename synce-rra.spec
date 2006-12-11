@@ -8,7 +8,7 @@ Group:		Libraries
 Source0: 	http://dl.sourceforge.net/synce/%{name}-%{version}.tar.gz
 # Source0-md5:	72742f93f19d5727159989ec80a725f0
 Patch0:		%{name}-libmimedir.patch
-URL:		http://synce.sourceforge.net/
+URL:		http://www.synce.org/
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake >= 1.4
 BuildRequires:	libmimedir-vlm-devel
