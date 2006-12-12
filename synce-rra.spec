@@ -2,7 +2,7 @@ Summary:	RRA - SynCE synchronization application
 Summary(pl):	RRA - aplikacja SynCE do synchronizacji
 Name:		synce-rra
 Version:	0.9.1
-Release:	3
+Release:	4
 License:	MIT
 Group:		Libraries
 Source0: 	http://dl.sourceforge.net/synce/%{name}-%{version}.tar.gz
@@ -18,7 +18,6 @@ BuildRequires:	synce-librapi2-devel >= 0.9.1
 BuildRequires:	synce-libsynce-devel >= 0.9.1
 Requires:	synce-librapi2 >= 0.9.1
 Requires:	synce-libsynce >= 0.9.1
-ExcludeArch:	alpha ia64 ppc64 s390x sparc64
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
