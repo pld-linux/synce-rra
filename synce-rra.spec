@@ -1,5 +1,5 @@
 Summary:	RRA - SynCE synchronization application
-Summary(pl):	RRA - aplikacja SynCE do synchronizacji
+Summary(pl.UTF-8):   RRA - aplikacja SynCE do synchronizacji
 Name:		synce-rra
 Version:	0.9.1
 Release:	4
@@ -27,16 +27,16 @@ The purpose of the SynCE project is to provide a means of
 communication with a Windows CE device from a computer running Linux,
 FreeBSD or a similar operating system.
 
-%description -l pl
-RRA to aplikacja do synchronizacji bÍd±ca czÍ∂ci± projektu SynCE.
+%description -l pl.UTF-8
+RRA to aplikacja do synchronizacji bƒôdƒÖca czƒô≈õciƒÖ projektu SynCE.
 
-Celem projektu SynCE jest dostarczenie ∂rodkÛw do komunikacji z
-urz±dzeniami opartymi na Windows CE z komputera z Linuksem, FreeBSD
+Celem projektu SynCE jest dostarczenie ≈õrodk√≥w do komunikacji z
+urzƒÖdzeniami opartymi na Windows CE z komputera z Linuksem, FreeBSD
 lub podobnym systemem operacyjnym.
 
 %package devel
 Summary:	Header files for RRA library
-Summary(pl):	Pliki nag≥Ûwkowe biblioteki RRA
+Summary(pl.UTF-8):   Pliki nag≈Ç√≥wkowe biblioteki RRA
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	libmimedir-vlm-devel
@@ -46,19 +46,19 @@ Requires:	synce-libsynce-devel >= 0.9.1
 %description devel
 Header files for RRA library.
 
-%description devel -l pl
-Pliki nag≥Ûwkowe biblioteki RRA.
+%description devel -l pl.UTF-8
+Pliki nag≈Ç√≥wkowe biblioteki RRA.
 
 %package static
 Summary:	Static RRA library
-Summary(pl):	Statyczna biblioteka RRA
+Summary(pl.UTF-8):   Statyczna biblioteka RRA
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description static
 Static RRA library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczna biblioteka RRA.
 
 %prep
