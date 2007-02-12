@@ -1,5 +1,5 @@
 Summary:	RRA - SynCE synchronization application
-Summary(pl.UTF-8):   RRA - aplikacja SynCE do synchronizacji
+Summary(pl.UTF-8):	RRA - aplikacja SynCE do synchronizacji
 Name:		synce-rra
 Version:	0.9.1
 Release:	4
@@ -36,7 +36,7 @@ lub podobnym systemem operacyjnym.
 
 %package devel
 Summary:	Header files for RRA library
-Summary(pl.UTF-8):   Pliki nagłówkowe biblioteki RRA
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki RRA
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	libmimedir-vlm-devel
@@ -51,7 +51,7 @@ Pliki nagłówkowe biblioteki RRA.
 
 %package static
 Summary:	Static RRA library
-Summary(pl.UTF-8):   Statyczna biblioteka RRA
+Summary(pl.UTF-8):	Statyczna biblioteka RRA
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
