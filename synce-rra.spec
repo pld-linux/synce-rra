@@ -1,12 +1,14 @@
+# TODO
+# - python bindings
 Summary:	RRA - SynCE synchronization application
 Summary(pl.UTF-8):	RRA - aplikacja SynCE do synchronizacji
 Name:		synce-rra
-Version:	0.9.1
-Release:	4
+Version:	0.10.0
+Release:	0.1
 License:	MIT
 Group:		Libraries
-Source0: 	http://dl.sourceforge.net/synce/%{name}-%{version}.tar.gz
-# Source0-md5:	72742f93f19d5727159989ec80a725f0
+Source0:	http://dl.sourceforge.net/synce/%{name}-%{version}.tar.gz
+# Source0-md5:	6d6de7637d59bddd52f5b656fad4abd2
 Patch0:		%{name}-libmimedir.patch
 URL:		http://www.synce.org/
 BuildRequires:	autoconf >= 2.50
@@ -14,10 +16,10 @@ BuildRequires:	automake >= 1.4
 BuildRequires:	libmimedir-vlm-devel
 BuildRequires:	libtool
 BuildRequires:	rpmbuild(macros) >= 1.213
-BuildRequires:	synce-librapi2-devel >= 0.9.1
-BuildRequires:	synce-libsynce-devel >= 0.9.1
-Requires:	synce-librapi2 >= 0.9.1
-Requires:	synce-libsynce >= 0.9.1
+BuildRequires:	synce-librapi2-devel >= 0.10.0
+BuildRequires:	synce-libsynce-devel >= 0.10.0
+Requires:	synce-librapi2 >= 0.10.0
+Requires:	synce-libsynce >= 0.10.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -40,8 +42,8 @@ Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki RRA
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	libmimedir-vlm-devel
-Requires:	synce-librapi2-devel >= 0.9.1
-Requires:	synce-libsynce-devel >= 0.9.1
+Requires:	synce-librapi2-devel >= 0.10.0
+Requires:	synce-libsynce-devel >= 0.10.0
 
 %description devel
 Header files for RRA library.
@@ -89,7 +91,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc LICENSE README TODO
+%doc README TODO
 %attr(755,root,root) %{_bindir}/*
 %attr(755,root,root) %{_libdir}/librra.so.*.*.*
 %{_mandir}/man1/*.1*
@@ -100,7 +102,10 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/librra.so
 %{_libdir}/librra.la
 %{_includedir}/rra
-%{_aclocaldir}/rra.m4
+%{_pkgconfigdir}/librra.pc
+#%{py_sitedir}/pyrra.a
+#%{py_sitedir}/pyrra.la
+#%{py_sitedir}/pyrra.so
 
 %files static
 %defattr(644,root,root,755)
