@@ -1,5 +1,3 @@
-# TODO
-# - python bindings
 Summary:	RRA - SynCE synchronization application
 Summary(pl.UTF-8):	RRA - aplikacja SynCE do synchronizacji
 Name:		synce-rra
@@ -15,6 +13,8 @@ BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake >= 1.4
 BuildRequires:	libmimedir-vlm-devel
 BuildRequires:	libtool
+BuildRequires:	python-Pyrex
+BuildRequires:	python-devel >= 2.2
 BuildRequires:	rpmbuild(macros) >= 1.213
 BuildRequires:	synce-librapi2-devel >= 0.10.0
 BuildRequires:	synce-libsynce-devel >= 0.10.0
@@ -55,13 +55,25 @@ Pliki nagłówkowe biblioteki RRA.
 Summary:	Static RRA library
 Summary(pl.UTF-8):	Statyczna biblioteka RRA
 Group:		Development/Libraries
-Requires:	%{name} = %{version}-%{release}
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static RRA library.
 
 %description static -l pl.UTF-8
 Statyczna biblioteka RRA.
+
+%package -n python-pyrra
+Summary:	Python binding for RRA library
+Summary(pl.UTF-8):	Wiązanie Pythona do biblioteki RRA
+Group:		Libraries/Python
+Requires:	%{name} = %{version}-%{release}
+
+%description -n python-pyrra
+Python binding for RRA library.
+
+%description -n python-pyrra -l pl.UTF-8
+Wiązanie Pythona do biblioteki RRA.
 
 %prep
 %setup -q
@@ -83,6 +95,8 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+rm -f $RPM_BUILD_ROOT%{py_sitedir}/pyrra.{la,a}
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -103,10 +117,11 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/librra.la
 %{_includedir}/rra
 %{_pkgconfigdir}/librra.pc
-#%{py_sitedir}/pyrra.a
-#%{py_sitedir}/pyrra.la
-#%{py_sitedir}/pyrra.so
 
 %files static
 %defattr(644,root,root,755)
 %{_libdir}/librra.a
+
+%files -n python-pyrra
+%defattr(644,root,root,755)
+%attr(755,root,root) %{py_sitedir}/pyrra.so
