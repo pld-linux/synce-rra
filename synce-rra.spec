@@ -1,4 +1,4 @@
-Summary:	RRA - SynCE synchronization application
+Summary:	Remote Replication Agent Connection protocol library
 Summary(pl.UTF-8):	RRA - aplikacja SynCE do synchronizacji
 Name:		synce-rra
 Version:	0.10.0
@@ -23,11 +23,11 @@ Requires:	synce-libsynce >= 0.10.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-RRA is a synchronization application, a part of the SynCE project.
+SynCE is a project for connecting to devices running Windows CE or
+Pocket PC.
 
-The purpose of the SynCE project is to provide a means of
-communication with a Windows CE device from a computer running Linux,
-FreeBSD or a similar operating system.
+RRA implements the Remote Replication Agent Connection protocol for
+synchronising objects between a Windows CE device and other computer.
 
 %description -l pl.UTF-8
 RRA to aplikacja do synchronizacji będąca częścią projektu SynCE.
