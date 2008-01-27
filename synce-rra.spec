@@ -16,10 +16,10 @@ BuildRequires:	libtool
 BuildRequires:	python-Pyrex
 BuildRequires:	python-devel >= 2.2
 BuildRequires:	rpmbuild(macros) >= 1.213
-BuildRequires:	synce-librapi2-devel >= 0.11
-BuildRequires:	synce-libsynce-devel >= 0.11
-Requires:	synce-librapi2 >= 0.11
-Requires:	synce-libsynce >= 0.11
+BuildRequires:	synce-librapi2-devel >= %{version}
+BuildRequires:	synce-libsynce-devel >= %{version}
+Requires:	synce-librapi2 >= %{version}
+Requires:	synce-libsynce >= %{version}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		filterout_ld	-Wl,--as-needed
@@ -44,8 +44,8 @@ Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki RRA
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	libmimedir-vlm-devel
-Requires:	synce-librapi2-devel >= 0.11
-Requires:	synce-libsynce-devel >= 0.11
+Requires:	synce-librapi2-devel >= %{version}
+Requires:	synce-libsynce-devel >= %{version}
 
 %description devel
 Header files for RRA library.
