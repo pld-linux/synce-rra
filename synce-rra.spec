@@ -2,7 +2,7 @@ Summary:	Remote Replication Agent Connection protocol library
 Summary(pl.UTF-8):	RRA - aplikacja SynCE do synchronizacji
 Name:		synce-rra
 Version:	0.10.0
-Release:	2
+Release:	3
 License:	MIT
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/synce/%{name}-%{version}.tar.gz
@@ -21,6 +21,8 @@ BuildRequires:	synce-libsynce-devel >= 0.10.0
 Requires:	synce-librapi2 >= 0.10.0
 Requires:	synce-libsynce >= 0.10.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+
+%define		filterout_ld	-Wl,--as-needed
 
 %description
 SynCE is a project for connecting to devices running Windows CE or
@@ -106,8 +108,9 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README TODO
-%attr(755,root,root) %{_bindir}/*
+%attr(755,root,root) %{_bindir}/synce-matchmaker
 %attr(755,root,root) %{_libdir}/librra.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/librra.so.0
 %{_mandir}/man1/*.1*
 
 %files devel
