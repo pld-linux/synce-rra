@@ -1,12 +1,12 @@
 Summary:	Remote Replication Agent Connection protocol library
 Summary(pl.UTF-8):	RRA - aplikacja SynCE do synchronizacji
 Name:		synce-rra
-Version:	0.11
+Version:	0.11.1
 Release:	1
 License:	MIT
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/synce/librra-%{version}.tar.gz
-# Source0-md5:	7a8933698d798cc590a6fcfe5b0ad3c2
+# Source0-md5:	1dff577a2b1ac85a69768de555d05ee7
 Patch0:		%{name}-libmimedir.patch
 URL:		http://www.synce.org/
 BuildRequires:	autoconf >= 2.50
@@ -18,8 +18,8 @@ BuildRequires:	python-devel >= 2.2
 BuildRequires:	rpmbuild(macros) >= 1.213
 BuildRequires:	synce-librapi2-devel >= %{version}
 BuildRequires:	synce-libsynce-devel >= %{version}
-Requires:	synce-librapi2 >= %{version}
-Requires:	synce-libsynce >= %{version}
+%requires_eq_to	synce-librapi2 synce-librapi2-devel
+%requires_eq_to	synce-libsynce synce-libsynce-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		filterout_ld	-Wl,--as-needed
