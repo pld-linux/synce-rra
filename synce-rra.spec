@@ -1,12 +1,12 @@
 Summary:	Remote Replication Agent Connection protocol library
 Summary(pl.UTF-8):	RRA - aplikacja SynCE do synchronizacji
 Name:		synce-rra
-Version:	0.12
-Release:	3
+Version:	0.14
+Release:	1
 License:	MIT
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/synce/librra-%{version}.tar.gz
-# Source0-md5:	867b29f88df6a7706c2a4b2bda658c9e
+# Source0-md5:	3a608174a3a476c96dd4dd4929448fe8
 Patch0:		%{name}-libmimedir.patch
 URL:		http://www.synce.org/
 BuildRequires:	autoconf >= 2.50
