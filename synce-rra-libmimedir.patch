@@ -9,3 +9,12 @@
  		AC_MSG_ERROR([Can't find libmimedir (http://sourceforge.net/projects/libmimedir/)])
  		])
  	AC_CHECK_HEADERS(libmimedir.h,,[
+--- librra-0.17/librra.pc.in.orig	2012-05-27 17:34:59.000000000 +0200
++++ librra-0.17/librra.pc.in	2015-01-31 10:08:43.884441666 +0100
+@@ -7,5 +7,5 @@
+ Description: Library to deal with synchronization of WinCE devices
+ Version: @VERSION@
+ Requires: libsynce
+-Libs: -L${libdir} -lrra -lmimedir
++Libs: -L${libdir} -lrra -lmimedir-vlm
+ Cflags: -I${includedir}
